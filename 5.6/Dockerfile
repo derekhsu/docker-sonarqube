@@ -1,6 +1,6 @@
 FROM java:8
 
-MAINTAINER David Gageot <david.gageot@sonarsource.com>
+MAINTAINER Derek Hsu <derekhsu@hotmail.com>
 
 ENV SONAR_VERSION=5.6 \
     SONARQUBE_HOME=/opt/sonarqube \
@@ -39,7 +39,7 @@ RUN set -x \
     && rm sonarqube.zip* \
     && rm -rf $SONARQUBE_HOME/bin/*
 
-VOLUME ["$SONARQUBE_HOME/data", "$SONARQUBE_HOME/extensions"]
+VOLUME ["$SONARQUBE_HOME/data", "$SONARQUBE_HOME/extensions", "$SONARQUBE_HOME/conf"]
 
 WORKDIR $SONARQUBE_HOME
 COPY run.sh $SONARQUBE_HOME/bin/
