@@ -1,6 +1,6 @@
 FROM java:8
 
-MAINTAINER David Gageot <david.gageot@sonarsource.com>
+MAINTAINER Derek Hsu <derekhsu@hotmail.com>
 
 ENV SONAR_VERSION=6.0 \
     SONARQUBE_HOME=/opt/sonarqube \
